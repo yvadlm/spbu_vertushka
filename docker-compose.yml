@@ -1,0 +1,14 @@
+services:
+  bot:
+    build: .
+    container_name: stationbot
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DB_PATH: /app/data/bot.db
+      SCORES_LOG: /app/data/scores_log.csv
+    volumes:
+      # база и CSV с баллами остаются на диске сервера, даже если пересоздать контейнер
+      - ./data:/app/data
+      # станции и организаторов можно менять без пересборки (потом: docker compose restart)
+      - ./stations.json:/app/stations.json:ro

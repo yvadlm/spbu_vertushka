@@ -1,0 +1,5 @@
+[
+  {"id": 1, "name": "Станция 1", "location": "101", "organizer_id": null},
+  {"id": 2, "name": "Станция 2", "location": "102", "organizer_id": null},
+  {"id": 16, "name": "Станция 16", "location": "240", "organizer_id": null}
+]
